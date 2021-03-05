@@ -148,7 +148,10 @@ int main() {
             if(!any_of(overlaps.cbegin(), overlaps.cend(), [&threatening_pairs, &point](const Point& p) {
                 return blocks_threaten(threatening_pairs.first, point, p);
             })) {
-                check_and_write(out, pair<Point, Point>(threatening_pairs.first, point), written);
+                if(check_and_write(out, pair<Point, Point>(threatening_pairs.first, point), written)) {
+                    cout << "Output failed";
+                    return 3;
+                }
             }
         }
     }
