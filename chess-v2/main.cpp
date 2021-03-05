@@ -117,7 +117,6 @@ bool check_and_write(ostream& out, pair<Point, Point> p, vector<pair<Point, Poin
 }
 
 int main() {
-    cout << blocks_threaten(Point{1, 1}, Point{1, 3}, Point{1, 2});
     ifstream in("input.txt");
     if(!in.is_open()) {
         cout << "Cannot open input.txt" << endl;
