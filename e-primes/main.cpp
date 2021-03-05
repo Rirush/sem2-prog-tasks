@@ -38,7 +38,7 @@ int main() {
         string s = e.substr(i, 10);
         long long v = stoll(s);
         if(check_if_prime(v)) {
-            cout << v << " " << i;
+            cout << v;
             break;
         }
     }
